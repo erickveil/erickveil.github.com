@@ -93,6 +93,13 @@ sending the server) and
 cat it onto the `~/.ssh/authorized_keys` after backing up:
 `cat id_rsa.pub >> authorized_keys`
 
+**Edit:** I've noticed that when I manualy copy the key in this way, I will get
+an error when I try to connect: `Agent admitted failure to sign using the key.`
+The solution I've found was to run `ssh-add` on the client machine. This adds
+the identity file for the keys to your authentication agent. If your private
+key is not in the usual location, you will have to specify the path to it. See
+`man ssh-add` for more information.
+
 Try using ssh to log on and make sure it worked.
 You will need to use the key's password now, instead of the user login
 password.
