@@ -2,4 +2,4 @@
 
 This is the repository for my GitHub Pages site.
 
-Visit it at erickveil.net
+Visit it at [erickveil.net](http://erickveil.net)
