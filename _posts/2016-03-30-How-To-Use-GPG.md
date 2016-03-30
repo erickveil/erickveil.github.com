@@ -192,5 +192,5 @@ This will send a string to our server after encrypting it with the server's publ
 My Public Key:
 ===
 
-http://pgp.zdv.uni-mainz.de:11371/pks/lookup?op=index&search=Erick+Veil
+[My current key can be found here.](http://pgp.zdv.uni-mainz.de:11371/pks/lookup?op=index&search=Erick+Veil)
 
