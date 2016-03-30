@@ -158,7 +158,7 @@ The simplest command there is. You will, of course require the appropriate key.
 gpg filename
 ```
 
-As you see, you generally encrypt with the recipient's public key so that only theat recipient can decipher the message with their own private key. So before you send someone a message, they will be required to get you their public key to use.
+As you see, you generally encrypt with the recipient's public key so that only that recipient can decipher the message with their own private key. So before you send someone a message, they will be required to get you their public key to use.
 
 So, for encryption:
 Recipient Public key encrypt. Recipient Private key decrypt.
@@ -208,7 +208,8 @@ On the server, set up a decrypting listener:
 ncat -lk 50000 | gpg
 ```
 
-The `ncat` program is used on Red Hat (Fedora, etc.) systems, while on a Debian (Ubuntu, etc.) system, you will use `nc`. Same thing different names for some reason. I think even the options are the same.
+The `ncat` program is used on Red Hat (Fedora, etc.) systems, while on a Debian
+(Ubuntu, etc.) system, you will use `nc`. Same thing, different names for some reason. I think even the options are the same.
 
 This will listen for messages on port 50000, then decrypt anything that comes through, printing it to stdout.
 
