@@ -168,7 +168,7 @@ Your Private key encrypt. Your Pubic key decrypt.
 
 With signing, _anybody_ who has access to your public key can decrypt the message, so it's not much in the way of security. So what is the point? The point of signing is integrity. Because only your public key can decipher the message, it is now definite the that message came from you and you only (unless your private key has been compromised!)
 
-To sign am message:
+To sign a message:
 
 ```
 gpg --sign myfile.ext
