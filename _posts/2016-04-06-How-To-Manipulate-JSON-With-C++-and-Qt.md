@@ -99,7 +99,7 @@ if(json_array.isEmpty()){
     exit();
 }
 
-for ( i=0; i< json_array.count(); ++i){
+for(i=0; i< json_array.count(); ++i){
     qDebug() << json_array.at(i).toString();
 }
 ```
