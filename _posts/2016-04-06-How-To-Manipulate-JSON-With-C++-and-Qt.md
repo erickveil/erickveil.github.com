@@ -4,9 +4,9 @@ title: How To Manipulate JSON With C++ and Qt
 date: 16-04-06 04:03:17 -0800
 categories: 
 ---
-#How To Use JSON in C++ With Qt
+# How To Use JSON in C++ With Qt
 
-##Load An Object From a JSON File and Print Its Members
+## Load An Object From a JSON File and Print Its Members
 
 First, we are going to load a simple JSON object and access the data saved in each of its fields.
 
@@ -70,7 +70,7 @@ qDebug()<< json_map["str"].toInt();
 qDebug()<< json_map["enemy"].toString();
 ```
 
-##Load An Array From A JSON File And Print Its Members
+## Load An Array From A JSON File And Print Its Members
 
 An array JSON file isn't much different from an object.
 
@@ -106,7 +106,7 @@ for ( i=0; i< json_array.count(); ++i){
 }
 ```
 
-##Load An Object With Array and Object Members And Print The Data
+## Load An Object With Array and Object Members And Print The Data
 
 Now we will try a deeper JSON file. This one is an object that contains an object and an array:
 
@@ -151,7 +151,7 @@ for(int i=0; i < key_list.count(); ++i){
 
 And finally, you can iterate through the inventory list like any other QList.
 
-##Turn A Native Class Object Into JSON and Print It As A String
+## Turn A Native Class Object Into JSON and Print It As A String
 
 Saving a JSON object is pretty much the same as loading one, except in reverse.
 You can create an empty `QJsonObject` and directly assign data to keys, and the
@@ -180,7 +180,7 @@ save_file.write(json_string.toLocal8Bit());
 save_file.close();
 ```
 
-##Turn An Array Into JSON And Print It As A String
+## Turn An Array Into JSON And Print It As A String
 
 Once you've gotten this far, saving a JSON list is easy.
 Just use `QJsonArray` instead of `QJsonObject` and append any new values, just
@@ -197,7 +197,7 @@ json_array.append("Freya");
 After that, casting to `QJsonDocument` and saving works exactly like it does
 for the `QJsonObject`.
 
-##Turn An Object With Mixed Data (array, object, simple variable) into JSON And Save As A File
+## Turn An Object With Mixed Data (array, object, simple variable) into JSON And Save As A File
 
 Finally, we are going to put all our save JSON knowledge together and save a
 multi-level JSON tree.
