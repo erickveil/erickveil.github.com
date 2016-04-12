@@ -22,7 +22,7 @@ Here we have a nice, flat object, with some mixed data.
 
 First step is to load the file and convert its contents into a `QbyteArray`.
 
-```
+{% highlight c++ %}
 QFile file_obj(file_path);
 if(!file_obj.open(QIODevice::ReadOnly)){
     qDebug()<<"Failed to open "<<file_path;
@@ -34,7 +34,7 @@ QString json_string;
 json_string = file_text.readAll();
 file_obj.close();
 QByteArray json_bytes = json_string.toLocal8Bit();
-```
+{% endhighlight %}
 
 Next step is to load it into a `QJsonDocument` then convert that to `QJsonObject`.
 
@@ -53,7 +53,7 @@ if(!json_doc.isObject()){
 QJsonObject json_obj=json_doc.object();
 
 if(json_obj.isEmpty()){
-    qDebug()>>"JSON object is empty.";
+    qDebug()<<"JSON object is empty.";
     exit(4);
 }
 ```
