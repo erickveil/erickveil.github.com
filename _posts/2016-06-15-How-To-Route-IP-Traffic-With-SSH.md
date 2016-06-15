@@ -4,7 +4,6 @@ title: How To Route IP Traffic With SSH
 date: 16-06-15 08:20:38 -0800
 categories: 
 ---
-#How To Route IP Traffic With SSH
 
 Real world scenario that I was in: A new guy had taken over the IT department at work, and the previous guy resigned suddenly without providing any training. The guy who left had a [truck factor](https://en.wikipedia.org/wiki/Bus_factor) of one when it came to the management of our internal network. The new guy will get it eventually, but in the meantime I have this customer.
 
@@ -50,7 +49,7 @@ Some of the options are the same as for the port forwarding.
 
 Notice the `[::]:` before we define the port forwarding. This allows a computer outside the network to connect.
 
-##SSHd Config Settings
+## SSHd Config Settings
 
 We will need to set some of the settings in sshd_config to keep the connection from dieing:
 
@@ -59,7 +58,7 @@ We will need to set some of the settings in sshd_config to keep the connection f
     ClientAliveInterval 30
     ClientAliveCountMax 99999
 
-##Firewalld settings
+## Firewalld settings
 We will also need to open the ports we use in our firewall daemon. I use Fedora, and I find firewalld to be the easiest command line firewall manager I've ever used. These steps need to be performed for both the Linode and the Tunnel Router. My embedded devices don't run a firewall.
 
 First get active zones and apply command to that zone:
