@@ -24,7 +24,7 @@ On the Tunnel Router, I run:
     ssh -f -g -L <Forwarded Port>:<Target Device IP>:<Listening Port> <user name>@<Tunnel Router IP> -N
 
 	# example:
-    ssh -f -g -L 50503:192.168.60.195:502 fac@192.168.60.164 -N
+    ssh -f -g -L 5053:192.168.60.101:502 user@192.168.60.100 -N
 
 - `-f` Puts ssh in the background when running. We don't need a shell to work with.
 - `-g` Allows a remote host to connect, which we need since we will be connecting from outside the network.
@@ -40,7 +40,7 @@ Set up a reverse tunnel on the Tunnel Router:
     ssh -f -g -N -T -R "[::]:<Client Port>:localhost:<Forwarded Port>" <Linode User>@<Linode IP Address>
 
 	# example:
-    ssh -f -g -N -T -R "[::]:50503:localhost:50503" user@45.33.111.28
+    ssh -f -g -N -T -R "[::]:5053:localhost:5053" user@54.33.11.28
 
 Some of the options are the same as for the port forwarding.
 
@@ -65,10 +65,9 @@ First get active zones and apply command to that zone:
 
     firewall-cmd --get-active-zones
 
-On Remote open port 50503 and 50502:
+On Remote open port 5053:
 
-    firewall-cmd --zone=FedoraServer --add-port=50503/tcp --permanent
-    firewall-cmd --zone=FedoraServer --add-port=50502/tcp --permanent
+    firewall-cmd --zone=FedoraServer --add-port=5053/tcp --permanent
 
 Reload firewall:
 
