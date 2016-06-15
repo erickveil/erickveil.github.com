@@ -5,11 +5,11 @@ date: 16-06-15 08:20:38 -0800
 categories: 
 ---
 
-Real world scenario that I was in: A new guy had taken over the IT department at work, and the previous guy resigned suddenly without providing any training. The guy who left had a [truck factor](https://en.wikipedia.org/wiki/Bus_factor) of one when it came to the management of our internal network. The new guy will get it eventually, but in the meantime I have this customer.
+Real world scenario that I was in: Problems with the local network at work have prevented port forwarding. The new guy in IT will get it eventually, but in the meantime I have this customer.
 
 One of our products is a network enabled, embedded system. We have an API that a client must use to communicate with the device, and this new customer wants to test the API on a device I have set up in our lab. The customer is far away, and needs to reach the device over the internet. Our new IT guy can not get our network to cooperate on the simple task of forwarding a port to this device, and our customer's deadline is looming.
 
-No problem. This looks like a job for SSH tunneling. However, these embedded devices do not run an ssh server. I'm going to have to use an intermediate computer to route traffic to the device and reverse tunnel out of our network.
+No problem. This looks like a job for SSH tunneling. However, these embedded devices do not run an ssh server. I'm going to have to use an intermediate computer to route traffic to the device and reverse tunnel out of our network. We perform this with IT's permission, of course. A reverse tunnel is not a secure thing to keep running, and we only take this method at work as a last resort.
 
 ![Connection Diagram](http://i.imgur.com/XrB6piq.png)
 
