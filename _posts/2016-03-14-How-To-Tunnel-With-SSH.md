@@ -160,3 +160,15 @@ At this point, you will have to enter the Destination user's password to proceed
 
 You can access Destination from a third computer also, as long as it can ssh into the Source computer at port 60000.
 
+### Edit: SSH Config Changes
+
+I came back here today to duplicate these procedures and create a tunnel, and I can't believe I left out some critical configuration changes. Without them, you are likely to experience frequent disconnections of an idle tunnel, especially if, like me, you are working on Linode.
+
+You will want to make these changes on both your internal and external machines. To edit your config for the SSH server, open `/etc/ssh/sshd_config` as root. Find the following lines, uncomment them if needed, and change their values:
+
+    TCPKeepalive yes
+    ClientAliveInterval 30
+    ClientAliveCountMax 99999
+
+That should help keep the pipe open.
+
