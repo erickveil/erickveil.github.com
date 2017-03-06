@@ -61,4 +61,5 @@ So this is mainly if you want your personal automation to tie into the specific 
 ### Sources:
 
 [Every developer should write a personal automation API](https://dev.to/anotherdevblog/every-developer-should-write-a-personal-automation-api)
+
 [IFTTT Adds a Channel for Makers](http://makezine.com/2015/06/26/ifttt-adds-new-channel-makers/)
