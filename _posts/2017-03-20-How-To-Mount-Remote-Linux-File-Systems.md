@@ -109,6 +109,10 @@ There's also the situation with HTTP vs HTTPS and certificate warnings that scar
 
 There's no simpler way that I see to pull this feature off. I suppose we will file this under "security vs. convenience".
 
+## Drawbacks
+
+The file system is just mounted. If the server's hard drive dies, those files are gone. It's not distributed like an actual cloud server would be. I highly reccomend periodic, automatic, off-site backup of your files. [There are a lot of solutions for this.](http://www.techrepublic.com/blog/10-things/10-outstanding-linux-backup-utilities/)
+
 ## Sources
 
 [https://github.com/libfuse/sshfs](https://github.com/libfuse/sshfs)
