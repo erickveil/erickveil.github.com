@@ -93,7 +93,7 @@ One of the nice features of cloud storage services like Dropbox is the ability t
 
 You can create a temporary SSH key. Perhaps create a sharing user account with limited access. Place any files to be shared in that account's accessible directories and then provide the end user with a temporary key and an `scp` command they can paste into their terminal.
 
-The drawbacks being that it doesn't scale well to multiple users if you do this a lot. Those users must grasp SSH keys and how they work. They must understand SCP, and they would require access to a machine that could run it. You wouldn't be able to use this method with the technologically incompetent I've met people who could barely manage Dropbox, but could still manage to download a Dropbox file if given the link. Such people would not be able to get a file from you using this method.
+The drawbacks being that it doesn't scale well to multiple users if you do this a lot. Those users must grasp SSH keys and how they work. They must understand SCP, and they would require access to a machine that could run it. You wouldn't be able to use this method with the technologically incompetent. I've met people who could barely manage Dropbox, but could still manage to download a Dropbox file if given the link. Such people would not be able to get a file from you using this method.
 
 Another option is to run a web server of your choice on the server machine. Then:
 
@@ -111,7 +111,7 @@ There's no simpler way that I see to pull this feature off. I suppose we will fi
 
 ## Backups
 
-The file system is just mounted. If the server's hard drive dies, those files are gone. It's not distributed like an actual cloud server would be. I highly recommend periodic, automatic, off-site backup of your files. [There are a lot of solutions for this.](http://www.techrepublic.com/blog/10-things/10-outstanding-linux-backup-utilities/). 
+The file system is just mounted. If the server's hard drive dies, those files are gone. It's not distributed like an actual cloud server would be. I highly recommend periodic, automatic, off-site backup of your files. [There are a lot of solutions for this](http://www.techrepublic.com/blog/10-things/10-outstanding-linux-backup-utilities/). 
 
 This puts us back in the position of hosting our files on someone else's computer, unless you happen to have two homes. However, you can at least enjoy the greater choice of who you trust with your files. Also, you can write a cron job that compresses the files in an encrypted tarball before backing them up. Then you can ship the backups to any remote cloud storage service you want and not worry about it. Eat your cake and have it too.
 
