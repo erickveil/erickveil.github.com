@@ -109,9 +109,11 @@ There's also the situation with HTTP vs HTTPS and certificate warnings that scar
 
 There's no simpler way that I see to pull this feature off. I suppose we will file this under "security vs. convenience".
 
-## Drawbacks
+## Backups
 
-The file system is just mounted. If the server's hard drive dies, those files are gone. It's not distributed like an actual cloud server would be. I highly reccomend periodic, automatic, off-site backup of your files. [There are a lot of solutions for this.](http://www.techrepublic.com/blog/10-things/10-outstanding-linux-backup-utilities/)
+The file system is just mounted. If the server's hard drive dies, those files are gone. It's not distributed like an actual cloud server would be. I highly recommend periodic, automatic, off-site backup of your files. [There are a lot of solutions for this.](http://www.techrepublic.com/blog/10-things/10-outstanding-linux-backup-utilities/). 
+
+This puts us back in the position of hosting our files on someone else's computer, unless you happen to have two homes. However, you can at least enjoy the greater choice of who you trust with your files. Also, you can write a cron job that compresses the files in an encrypted tarball before backing them up. Then you can ship the backups to any remote cloud storage service you want and not worry about it. Eat your cake and have it too.
 
 ## Sources
 
