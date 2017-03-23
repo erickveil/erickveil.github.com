@@ -135,4 +135,15 @@ This puts us back in the position of hosting our files on someone else's compute
 
 [https://linux.die.net/man/1/mktemp](https://linux.die.net/man/1/mktemp)
 
+## Addendum: Not a Great Cloud Replacement
+
+After trying this for a few days, it seems like an impractical replacement for a cloud storage service. Every action in the mounted directory lags, as you are now transferring files over the Internet.
+
+The android SSHFS requires root. SFTP requires manually moving files and keeping track of which is newer. The Astro file browser does not appear to support key files. It will mount the directory, but you will need to allow password access (weak). Also, the lag issue.
+
+Something based on rsync might be better.
+
+A better use for SSHFS would be for mounting on a fixed computer over a local network, in a situation where you find yourself very frequently moving files between two computers, and the remote one is Linux.
+
+
 
