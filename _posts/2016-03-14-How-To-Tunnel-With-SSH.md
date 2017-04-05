@@ -5,7 +5,7 @@ date: 16-03-14 11:28:42 -0800
 categories: 
 ---
 
-SSH Tunnelling
+SSH Tunneling
 ====
 The poor man's VPN. SSH can be used for much more than remote access to a computer shell.
 
@@ -52,7 +52,7 @@ Port Forwarding to a Different Machine: Option -L
 
 Now we set up the tunnel. This will work like when we set port-forwarding on our router. Say my internal computer has a server listening on port 6000, but when I connect to my network from the internet, my router takes anything that is sent to port 5000 and routes it to port 6000 on the internal computer. 
 
-That is what we are doing here: The client at localhost is synonomous with the "router" and the server is synonymous with the internal computer. We will set it so that anything sent to client, port 5000 gets routed to server, port 6000.
+That is what we are doing here: The client at localhost is synonymous with the "router" and the server is synonymous with the internal computer. We will set it so that anything sent to client, port 5000 gets routed to server, port 6000.
 
 From the client:
 
@@ -74,7 +74,7 @@ Then back on the client:
 echo hello | ncat 127.0.0.1 5000
 ```
 
-You would see, even though we sent our string to localhost, it was recieved on the server end of things.
+You would see, even though we sent our string to localhost, it was received on the server end of things.
 
 Three-Way
 ===
@@ -116,11 +116,11 @@ In the browser:
 - Optionally check "Remote DNS" to tunnel all of the DNS lookups as well.
 - Click OK and save the changes.
 
-Finally, visit whatismyip.com again, and note that the ip has changed to that of the proxy we set up.
+Finally, visit whatismyip.com again, and note that the IP has changed to that of the proxy we set up.
 
 More info on SOCKS: https://en.wikipedia.org/wiki/SOCKS
 
-Reverse Tunnelling: Option -R
+Reverse Tunneling: Option -R
 ====
 
 The scenario: You are appropriately paranoid and you've set your personal network firewall to block all incoming traffic, such as SSH. But you want to make a special case for yourself so you can shell into your own network while you relax on the beach with your portable wireless wifi. The reverse tunnel gives you that special exception.
@@ -132,13 +132,15 @@ First, I need to clarify a couple definitions. Since with a reverse tunnel, some
 
 Things get confusing, because during setup, the Source is the server, and the Destination is the client, which is reverse of what you are used to.
 
-The process requires some initial access to the Destination. You have to set up access from there in order for this to work. Reverse tunnelling will not allow an outsider to break past your firewall, unless he was able to access the Destination computer at some point in the past.
+The process requires some initial access to the Destination. You have to set up access from there in order for this to work. Reverse tunneling will not allow an outsider to break past your firewall, unless he was able to access the Destination computer at some point in the past.
 
 Unlike the other ssh commands, in which you run the ssh command on the Source, this command is executed on the Destination. 
 
 ```
 ssh -f -N -T -R 60000:localhost:22 sourceuser@source.public.ip
 ```
+
+NOTE: I've tried this while tunneling a non-ssh port and found that using "localhost" doesn't always work for that. I have had success using the internal network IP of the destination machine instead.
 
 If you are like me, and you have your ssh port forwarded on your router, or your ssh server on your Source machine is different from 22, then you will have to add the `-p` option, with the port number that your Source computer's ssh server listens on.
 
