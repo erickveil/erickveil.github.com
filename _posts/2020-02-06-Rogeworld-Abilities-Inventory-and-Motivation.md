@@ -40,3 +40,9 @@ Now, I would love to insert mechanics that rely on progress. But first I must fi
 I did promise that I would try to get you a downloadable version of the game, but it's not going to happen this week. I just ran a build, and now I've discovered that in a build the game doesn't start properly, even though it starts properly in the editor. This will have to be sorted out before I can get you something that at least you can move around on and explore.
 
 For now, you will have to content yourself with reading.
+
+## Edit: Download Available!
+
+I worked out the problem thanks to [this obscure clue.](https://gitlab.com/altom/altunity/altunitytester/issues/236) I had to figure out how to get the deployment to generate a log. Once I had that, I had an error message. That eventually led me to the link. The problem was that I am using dynamic objects for player and mob attribute and equipment (*that's* a whole blog post in itself). I'm using JSON.NET for this because it's so easy to use and there's that lingering future feature of serialization I talked about. Unity defaults to building to .NET 2.0, which didn't support JSON.NET. Changing it to 4.0 fixed the compile.
+
+[Here's a link](https://github.com/erickveil/erickveil.github.com/releases/tag/RW-0.1) to the very buggy early pre-release. We're not even alpha yet, folks.
