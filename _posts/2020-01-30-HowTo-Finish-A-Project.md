@@ -2,7 +2,7 @@
 layout: post
 title: How To Finish Projects
 date: 20-01-28 06:00:00 -0800
-categories: SSH, SSHFS, SFTP, Linux, Cloud
+categories: Rogueworld, Rogelikes, Game Design, Unity
 ---
 
 ![Rogueworld](https://i.imgur.com/zNazoy2.jpg)

@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Rogueworld: Abilities, Inventory, and Motivation
+title: Rogueworld Combat and Motivation
 date: 20-02-05 06:00:00 -0800
-categories: SSH, SSHFS, SFTP, Linux, Cloud
+categories: Rogueworld, Rogelikes, Game Design, Unity
 ---
 
 ![Rogueworld Camping](https://i.imgur.com/IohIny4.jpg)
