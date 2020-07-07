@@ -26,7 +26,18 @@ Here's the breakdown:
 - Keep 14 files (two weeks)
 - Keep the files 24 hours long. (24 hours x 60 minutes x 60 seconds = 86400)
 - Capture only TCP, from remote host at address 192.168.60.101:502
+- End the command with an ampersand so that it runs in the background.
 
 Now, I know the amount of traffic to expect between the server and the target machine, but if I didn't, I risk the possibility of having gigantic files in each 24 hour period. If I were worried about that, I could also limit the capture file size using `-b filesize: 16384` for a 16 mb maximum size.
 
 So that's it. I finally got tired of looking this up every time I needed it, and wrote this blog post so that it would be easy to find.
+
+## You Have Permission
+
+Both tshark and dumcap are very skitish when it comes to permissions. It seems like they folow a different and more restrictive set of rules when it comes to where they can even write their output files.
+
+So I run this program as root, and any output files go to `/root/`.
+
+"Oh nooo!" cry all the online professional Linux people, "Do not be root!" Listen: I don't have time to navigate the absurd permissions issues of a Linux machine. I get it, it's "safer". But let's just assume I'm a big boy and I understand the risk and have made a calculated decision to get on with my day and root this whole process. This gives me a full 8 hours of sleep.
+
+Still, if you try this at home, make sure you are the admin of the machine in question. Do the research, understand and accept the responsibility. Or spend two days figuring out which flags need to be set where just to get something simple done. I'm not the boss of you.
