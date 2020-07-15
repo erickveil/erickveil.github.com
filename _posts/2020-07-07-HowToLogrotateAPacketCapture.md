@@ -4,6 +4,7 @@ title: How To Rotate Packet Capture Logs
 date: 20-07-06 06:00:00 -0800
 categories: Linux, sockets, network, wireshark, pcap
 ---
+![Post Banner](https://i.imgur.com/Id6h2yH.jpg)
 
 I write a lot of network enabled programs for my day job. Often, I have the opposite problem of the classic "It Works On My Machine" issue. Instead, I get a lot of "It Doesn't Work On My Machine Only" from customers. The program will work perfectly fine everywhere but on the one customer's network.
 I have the luxury of controlling the machine and OS my software runs on, as it's more of an embedded system. But I never have control of the network and the clients that talk to my machine. So sometimes I need to get right down to the network card and take a look at what's actually happening to get to the bottom of the problem. Honestly, the logs my program generates give me everything I need to know, but capturing the actual traffic on the network card will give me more proof that the problem is not me, or provide a valuable clue as to where my code has gone wrong.
