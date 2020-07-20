@@ -18,7 +18,7 @@ The solution is `dumpcap`. It's my understanding that dumpcap is used by tshark 
 So, here's the command I've come up with:
 
 ```
-dumpcap -i eth0 -w pcap.cap -b files: 14 -b duration 86400 -f "tcp" -f "host 192.168.60.101" -f "port 502" &
+dumpcap -i eth0 -w pcap.cap -b files:14 -b duration:86400 -f "tcp" -f "host 192.168.60.101" -f "port 502" &
 ```
 
 Here's the breakdown:
