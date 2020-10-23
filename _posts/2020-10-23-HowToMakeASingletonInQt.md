@@ -1,9 +1,10 @@
 ---
 layout: post
-title: How To Write a Singleton in Qt C++
+title: How To Compose a Singleton in C++ Qt
 date: 20-10-22 06:00:00 -0800
 categories: C++, singleton, Qt, design patterns
 ---
+![Post Banner](https://i.imgur.com/Id6h2yH.jpg)
 
 Lately I've been preferring my configuration files for programs I write to be
 [singletons.](https://en.wikipedia.org/wiki/Singleton_pattern) It's one of the
