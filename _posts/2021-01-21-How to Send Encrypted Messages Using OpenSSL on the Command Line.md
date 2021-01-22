@@ -103,7 +103,7 @@ ACCEPT
 Like **ncat** you will have an open prompt for stdin and stdout.
 You can also instead pipe in a server response for an immediate respond and hangup the same way you do with **ncat** (`echo Acknowledged | openssl s_server ...`).
 
-## Run Client
+### Run Client
 
 Here you'll get a lot of information as the connection is established:
 
