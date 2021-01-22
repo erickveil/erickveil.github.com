@@ -64,9 +64,9 @@ https://www.openssl.org/docs/man1.1.1/man1/openssl-s_server.html
 
 Here is a breakdown of the options:
 
-- **-accept <port>** According to the man page, this will accept an IP and port. It's not clear from the text, but it looks like something like 192.168.0.1:4433 or *:4433 is the valid format. An example would be nice. There is an example for a -www connection where just the port is used (openssl s_server -accept 443 -www) to imitate a secure web server.
-- **-key <keyfile>** Is the private key to use. I'm again assuming this is a filepath to the file, similar to how we specify the rsa file in an ssh command. "If not specified then the certificate file will be used." Assume that the certificate is like the default rsa file in ssh after creation?
-- **-cert <certfile>** "If not specified, then the filename "server.pem" will be used."
+- **-accept port** According to the man page, this will accept an IP and port. It's not clear from the text, but it looks like something like 192.168.0.1:4433 or *:4433 is the valid format. An example would be nice. There is an example for a -www connection where just the port is used (openssl s_server -accept 443 -www) to imitate a secure web server.
+- **-key keyfile** Is the private key to use. I'm again assuming this is a filepath to the file, similar to how we specify the rsa file in an ssh command. "If not specified then the certificate file will be used." Assume that the certificate is like the default rsa file in ssh after creation?
+- **-cert certfile** "If not specified, then the filename "server.pem" will be used."
 
 ## The Client
 
