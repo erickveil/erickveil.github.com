@@ -37,17 +37,12 @@ Here's a quick and dirty command for getting a certificate:
 
 Options breakdown:
 
-    -x509               Causes "output of a self signed certificate instead of a certificate request... a large random number will be used for the serial number"
-
-    -nodes             "... if a private key is created it will not be encrypted" I am uncertain what the implication is.
-
-    -days               Specifies the number of days the certificate is "certified" for. Default is 30 days. Uncertain what "certified" means, or what happens after the time is up. Is it possible to have a certificate that doesn't expire?
-
-    -newkey rsa         We're familiar with rsa keys from ssh work. This generates an rsa key of the size indicated in "the config" (likely at /usr/local/ssl/openssl.cnf). Use -rsa:1024 to generate a 1024 bit rsa key.
-
-    -keyout keyfile.key Output file for the key. Config will define any default file if not provided. Man examples all show "key.pem" so maybe this is a better name (or at leas extension).
-
-    -out certfile.crt   "specifies the output filename" according to the man, but doesn't tell what's outputted. Also states that it defaults to stdout if not provided. This example suggests that it's the certificate that's output. Man examples show this filename to be req.pem.
+- **-x509** Causes "output of a self signed certificate instead of a certificate request... a large random number will be used for the serial number"
+- **-nodes** "... if a private key is created it will not be encrypted" I am uncertain what the implication is.
+- **-days** Specifies the number of days the certificate is "certified" for. Default is 30 days. Uncertain what "certified" means, or what happens after the time is up. Is it possible to have a certificate that doesn't expire?
+- **-newkey rsa** We're familiar with rsa keys from ssh work. This generates an rsa key of the size indicated in "the config" (likely at /usr/local/ssl/openssl.cnf). Use -rsa:1024 to generate a 1024 bit rsa key.
+- **-keyout keyfile.key** Output file for the key. Config will define any default file if not provided. Man examples all show "key.pem" so maybe this is a better name (or at leas extension).
+- **-out certfile.crt** "specifies the output filename" according to the man, but doesn't tell what's outputted. Also states that it defaults to stdout if not provided. This example suggests that it's the certificate that's output. Man examples show this filename to be req.pem.
 
 The man example is more like this:
 
@@ -69,11 +64,9 @@ https://www.openssl.org/docs/man1.1.1/man1/openssl-s_server.html
 
 Here is a breakdown of the options:
 
-    -accept <port>      According to the man page, this will accept an IP and port. It's not clear from the text, but it looks like something like 192.168.0.1:4433 or *:4433 is the valid format. An example would be nice. There is an example for a -www connection where just the port is used (openssl s_server -accept 443 -www) to imitate a secure web server.
-
-    -key <keyfile>      Is the private key to use. I'm again assuming this is a filepath to the file, similar to how we specify the rsa file in an ssh command. "If not specified then the certificate file will be used." Assume that the certificate is like the default rsa file in ssh after creation?
-
-    -cert <certfile>    "If not specified, then the filename "server.pem" will be used."
+- **-accept <port>** According to the man page, this will accept an IP and port. It's not clear from the text, but it looks like something like 192.168.0.1:4433 or *:4433 is the valid format. An example would be nice. There is an example for a -www connection where just the port is used (openssl s_server -accept 443 -www) to imitate a secure web server.
+- **-key <keyfile>** Is the private key to use. I'm again assuming this is a filepath to the file, similar to how we specify the rsa file in an ssh command. "If not specified then the certificate file will be used." Assume that the certificate is like the default rsa file in ssh after creation?
+- **-cert <certfile>** "If not specified, then the filename "server.pem" will be used."
 
 ## The Client
 
