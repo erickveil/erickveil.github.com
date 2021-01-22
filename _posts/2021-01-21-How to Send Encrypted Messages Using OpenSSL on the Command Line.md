@@ -4,7 +4,7 @@ title: How to Send Encrypted Messages Using OpenSSL on the Command Line
 date: 21-01-21 06:00:00 -0800
 categories: OpenSSL, SSL, Encryption, Socket, Network, Bash, Linux
 ---
-![Post Banner](https://i.imgur.com/MFVpkYA.jpg)
+![Post Banner](https://i.imgur.com/pmNIMfn.jpg)
 
 # Intro Blah Blah Blah
 
