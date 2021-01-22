@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How To Compose a Singleton in C++ Qt
+title: How to Send Encrypted Messages Using OpenSSL on the Command Line
 date: 21-01-21 06:00:00 -0800
 categories: OpenSSL, SSL, Encryption, Socket, Network, Bash, Linux
 ---
