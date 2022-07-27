@@ -13,7 +13,7 @@ Now they want a special "key" to be used, which, honestly, is just a password.
 
 A bad password. 
 
-It's random, and can't be memorized, so now Github users keep a plain text password in a file to use anytime they need to enter it via cut an paste. Whereas a password that can be held in the brain is more secure. 
+It's random, and can't be memorized, so now Github users keep a plain text password in a file to use anytime they need to enter it via cut and paste. Whereas a password that can be held in the brain is more secure. 
 
 Are user passwords often bad? Yes. But Github is not Facebook. Your tech-illiterate grandma isn't using it. Software developers are. Microsoft doesn't really need to hold our hand when we cross the street.
 
@@ -23,7 +23,7 @@ The change makes sense if you work in information security: Your job is to make 
 
 Managers, you see, are the biggest obstacle to actual productivity. (Not all of them, of course. I've had some good ones.)
 
-So to justify your continued employment, you have to invent problems to solve. This is why we periodically get "new" zero-day vulnerabilities with their own websites, logos, and catchy names while ignoring the thousands of other vulnerabilities that are still out there and have been for some time. The new marketing team is trying to drum up business so the security company doesn't go out of business. Managers eat that stuff up with a side of Blockchain and Enterprise Cloud as a Service just before they click the link on the phishing email.
+So to justify your continued employment, you have to invent problems to solve. This is why we periodically get "new" zero-day vulnerabilities with their own websites, logos, and catchy names while ignoring the thousands of other vulnerabilities that are still out there and have been for some time. The new marketing team is trying to drum up business so the security company doesn't go out of business. Managers eat that stuff up with a side of Blockchain and Enterprise Cloud as a Service just before they click the link on the phishing email to buy that hot new NFT.
 
 So here we are. Github made an arbitrary change (that is actually *worse* than the original solution) and Bitbucket followed just because a manager didn't want to look like they didn't know what they were doing.
 
