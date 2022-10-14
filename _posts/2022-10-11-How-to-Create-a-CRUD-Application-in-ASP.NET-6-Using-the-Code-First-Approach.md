@@ -5,13 +5,13 @@ date: 22-10-13
 categories: C#, ASP.NET, ASP, .NET, CRUD, Model First, Model, MVC
 ---
 
-I've been working on CRUD applications since the defacto standard was the LAMP stack and you had to program [prepared statements](https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php) in PHP. With C#, ASP.NET takes all the fun out of it so you are less likely to mess it up. It's entirely possible to write up a simple CRUD application these days without knowing a lick of SQL. In my opinion, that's good. Anything to get us away from bypassing the compiler by writing code inside a string. If we could also retire unreadable regex right next to the goto statement, that would be perfect.
+I've been working on CRUD applications since the de facto standard was the LAMP stack and you had to program [prepared statements](https://www.php.net/manual/en/mysqli.quickstart.prepared-statements.php) in PHP. With C#, ASP.NET takes all the fun out of it so you are less likely to mess it up. It's entirely possible to write up a simple CRUD application these days without knowing a lick of SQL. In my opinion, that's good. Anything to get us away from bypassing the compiler by writing code inside a string. If we could also retire unreadable regex right next to the goto statement, that would be perfect.
 
 # First You Need a Model
 
-You have to start somewhere. In the bad-old-days we started with the database, using query language to create the tables and columns. With [Code First](https://learn.microsoft.com/en-us/ef/ef6/modeling/code-first/workflows/new-database) you start... well, you start with the code. The Model specifically. You know what a Model is, because you've been using [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) as a basic priciple in all of your applications, right? Right?
+You have to start somewhere. In the bad-old-days we started with the database, using query language to create the tables and columns. With [Code First](https://learn.microsoft.com/en-us/ef/ef6/modeling/code-first/workflows/new-database) you start... well, you start with the code. The Model specifically. You know what a Model is, because you've been using [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) as a basic principle in all of your applications, right? Right?
 
-Your model is the code that represents your data in your program. It's just a class that holds values that you've querried from the database. And in this case, it's the Code in "Code First".
+Your model is the code that represents your data in your program. It's just a class that holds values that you've queried from the database. And in this case, it's the Code in "Code First".
 
 ## Here's the steps:
 
