@@ -1,6 +1,6 @@
 ---
-title: How To: Kotlin Architecture - Which One to Use?
-layout: note
+title: How To Select Which Kotlin Project Architecture to Use
+layout: post
 date: 23-08-11
 tags:
   - android

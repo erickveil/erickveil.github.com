@@ -1,6 +1,6 @@
 ---
 title: How To Do Dependency Injection With Hilt
-layout: note
+layout: post
 date: 23-06-23
 tags:
   - android

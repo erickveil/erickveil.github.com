@@ -1,6 +1,6 @@
 ---
 title: How To Use Kotlin Coroutines
-layout: note
+layout: post
 date: 23-04-19
 tags:
   - kotlin

@@ -1,6 +1,6 @@
 ---
 title: How To Use Kotlin Lambdas
-layout: note
+layout: post
 date: 2023-03-21
 tags:
   - closures
