@@ -1,6 +1,6 @@
 ---
 title: How To Design an MVI Project For Android Part 1 - The Model
-layout: note
+layout: post
 date: 23-09-02
 tags:
   - kotlin
