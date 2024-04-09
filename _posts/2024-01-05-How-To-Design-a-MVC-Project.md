@@ -13,17 +13,17 @@ If you've read through all EIGHT of my MVI articles, here's the same application
 
 MVC (Model-View-Controller) is a popular design pattern often used in web development, but it's also quite relevant in Android development. The idea behind MVC is to separate the application's concerns into three interconnected components:
 
-- **Model**: This represents the data and the business logic of your application. It's where your database, network code, and data manipulation logic typically live. In an Android context, this might be your SQLite database, a REST API integration, or any internal logic classes that handle the data your application uses.
+- **Model**: This represents the data and the business logic of our application. It's where our database, network code, and data manipulation logic typically live. In an Android context, this might be our SQLite database, a REST API integration, or any internal logic classes that handle the data our application uses.
     
-- **View**: The View is what the user sees and interacts with. It displays the data (the model) and sends user actions (like button clicks) to the controller to process. In Android, this is usually represented by the XML layout files, but also includes the Android Views (like `TextView`, `Button`, `RecyclerView`) you interact with in your Java or Kotlin code.
+- **View**: The View is what the user sees and interacts with. It displays the data (the model) and sends user actions (like button clicks) to the controller to process. In Android, this is usually represented by the XML layout files, but also includes the Android Views (like `TextView`, `Button`, `RecyclerView`) we interact with in our Java or Kotlin code.
     
-- **Controller**: This component acts as an intermediary between the Model and the View. It listens to the user actions performed on the View, processes them (possibly updating the Model), and can update the View to reflect changes in the Model. In Android, Activities and Fragments typically take on the role of the controller, managing the lifecycle of your views and responding to user input.
+- **Controller**: This component acts as an intermediary between the Model and the View. It listens to the user actions performed on the View, processes them (possibly updating the Model), and can update the View to reflect changes in the Model. In Android, Activities and Fragments typically take on the role of the controller, managing the lifecycle of our views and responding to user input.
 
 This is going to be much more straight forward than our MVI project. MVC is the classic method for Android development. 
 
 ### Approach Considerations
 
-MVC is going to work best if we're going to use XML for our View, as it's a bit of a wedge to mash Jetpack Compose into this pattern. In Compose, the View and Controller aspects tend to blend due to its declarative nature. Really, you don't have Controllers in the traditional sense. The logic for responding to user interactions and updating the state is often embedded within or directly managed by the composable functions themselves or by ViewModel components that the composable functions observe. Compose fits more naturally with patterns like MVVM (Model-View-ViewModel).
+MVC is going to work best if we're going to use XML for our View, as it's a bit of a wedge to mash Jetpack Compose into this pattern. In Compose, the View and Controller aspects tend to blend due to its declarative nature. Really, we don't have Controllers in the traditional sense. The logic for responding to user interactions and updating the state is often embedded within or directly managed by the composable functions themselves or by ViewModel components that the composable functions observe. Compose fits more naturally with patterns like MVVM (Model-View-ViewModel).
 
 # The Model
 
@@ -39,25 +39,23 @@ Here's my old JSON table we're going to use as the data source:
 
 As usual, I'm putting this in the `assets` directory.
 
-Yes, putting your JSON file in the `assets` directory of your Android project is a good approach. The `assets` directory is the right place for files that you want to include in your application and access as raw byte streams. It's particularly useful for static files that you bundle with your app, like JSON files, because it allows you to read the file contents as a String, which you can then parse.
+Here's how we can structure our Kotlin Model to parse the JSON using `kotlinx.serialization`, a powerful Kotlin library for serializing and deserializing JSON data into Kotlin objects. First, we'll need to add the library to our project.
 
-Here's how you can structure your Kotlin Model to parse the JSON using `kotlinx.serialization`, a powerful Kotlin library for serializing and deserializing JSON data into Kotlin objects. First, you'll need to add the library to your project.
-
-1. **Add the dependencies** to your `build.gradle` file:
+1. **Add the dependencies** to our `build.gradle` file:
 ```kotlin
 dependencies {  
 	implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:+")  
 }
 ```
 
-And the plugin at the top of your `build.gradle`:
+And the plugin at the top of our `build.gradle`:
 ```kotlin
 plugins {  
 	kotlin("plugin.serialization") version "+"  
 }
 ```
 
-2. **Define your data classes** to model the JSON structure. These classes will be used by `kotlinx.serialization` to deserialize the JSON into Kotlin objects.
+2. **Define our data classes** to model the JSON structure. These classes will be used by `kotlinx.serialization` to deserialize the JSON into Kotlin objects.
 
 **LootTable.kt**:
 ```kotlin
@@ -119,7 +117,7 @@ Honestly, I just use the WSYIWYG editor in Android Studio to set up my view. It'
 
 # The Controller
 
-Setting up the Controller part (in this case, your Activity) in Kotlin to interact with these UI elements will be straightforward. You'll set up an `OnClickListener` for the button that, when pressed, calls a function to roll on the loot table and updates the TextView with the selected item.
+Setting up the Controller part (in this case, our Activity) in Kotlin to interact with these UI elements will be straightforward. We'll set up an `OnClickListener` for the button that, when pressed, calls a function to roll on the loot table and updates the TextView with the selected item.
 
 Let's create a Kotlin Activity that loads the loot table from the JSON file in the assets directory, waits for the user to press the roll button, and then displays a random item from the loot table in the TextView.
 
@@ -155,7 +153,7 @@ class MainActivity : AppCompatActivity() {
 
 This code does the following:
 
-1. **Loads the loot table** from the JSON file in the `assets` directory when the activity is created. Make sure your JSON file is named `loot_table.json` and is placed in the `assets` folder. If you haven't created this folder yet, you can do so by right-clicking on the `src/main` directory in Android Studio, choosing `New > Directory`, and naming it `assets`.
+1. **Loads the loot table** from the JSON file in the `assets` directory when the activity is created. Make sure our JSON file is named `loot_table.json` and is placed in the `assets` folder. 
 
 2. **Finds the button and text view** in the layout by their IDs.
 
@@ -170,6 +168,6 @@ This setup follows the MVC pattern with:
 
 It's pretty simple compared to my **Eight Part** 😲 MVI walkthrough which does the same thing as this one. I think if you're going to want to put together a project that's not MVC, you're going to have to come up with a very good reason to give up the simplicity of development you've got here. 
 
-One reason that I can think of right now might be: Maybe you're working on a more dynamic UI. The static nature of the XML does not lend itself very well to dynamically generating UI elements on the fly. It's not impossible, but I would rather do that job in Compose.
+One reason that I can think of right now might be: Maybe we're working on a more dynamic UI. The static nature of the XML does not lend itself very well to dynamically generating UI elements on the fly. It's not impossible, but I would rather do that job in Compose.
 
 Here's the whole project on GitHub: [MVC Table Roller](https://github.com/erickveil/MVC_Table_Roller)
