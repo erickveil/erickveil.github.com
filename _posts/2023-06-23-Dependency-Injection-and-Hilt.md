@@ -173,7 +173,7 @@ The custom delegate example in Kotlin can mimic the singleton pattern to some ex
 
 # Creating Our Own Hilt Modules
 
-To get the decoupling and testability benefits of Dependency Injection (DI) by injecting an instance of class A into class B, we'll follow a few steps. Assuming we're working in a Kotlin environment and wish to apply these principles perhaps within an Android context or any Kotlin-based application, here's a general approach:
+To get the decoupling and testability benefits of Dependency Injection (DI) by injecting an instance of class A into class B, we'll follow a few steps.
 
 ### Step 1: Define Our Classes
 

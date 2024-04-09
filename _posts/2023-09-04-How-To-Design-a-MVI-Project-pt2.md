@@ -1,5 +1,5 @@
 ---
-title: How To Design an MVI Project For Android Part 2 - The View
+title: How To Design an MVI Project For Android Part 2 - Using Jetpack Compose for The View
 layout: post
 date: 23-09-04
 tags:
