@@ -9,6 +9,8 @@ I am a software developer with over twelve years of professional experience. How
 # Experience
  
 ## Bose
+![](https://raw.githubusercontent.com/erickveil/erickveil.github.com/master/bose.png)
+
 ### Senior Application Software Engineer
 2022 to Present (Two Years)
 
@@ -31,6 +33,8 @@ Bose is the industry leader in audio equipment from personal to professional use
 - Bluetooth and Network socket programming in C++, Kotlin, and Swift for TCP and UDP sockets on - Wireshark, TShark, and dumpcap to analyze and debug network traffic between applications and devices.
  
 ## ComTech Communications
+![](https://raw.githubusercontent.com/erickveil/erickveil.github.com/master/comtech.png)
+
 ### Senior Software Engineer
 2012 to 2022 (Ten Years)
 
