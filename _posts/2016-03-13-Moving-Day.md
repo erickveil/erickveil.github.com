@@ -18,3 +18,9 @@ When I encountered GitHub's pages, I knew it would be a more appropriate venue.
 [Jekyll](http://jekyllrb.com/) was easy to set up and I was able to find my way around the basics in a day. I like that the pages are static. I like that it interprets directly from my markdown notes, reducing formatting time before posting. I like the syntax highlighting features. I like that it ties right in with my GitHub, where my public code is hosted anyway.
 
 I feel like this site will help me be more expressive whit my ever growing portfolio. I might port over the old site articles (if I ever catch up on the backlog of new ones) but until then they will remain available on the Google Sites page.
+
+# Edit in 2023:
+
+The old site is long gone. But the Wayback Machine arcived some of it's article pages, which you can find [here](https://web.archive.org/web/*/https://sites.google.com/site/erickveilprogramming/*). Some of the oldest articles are lost to time.
+
+

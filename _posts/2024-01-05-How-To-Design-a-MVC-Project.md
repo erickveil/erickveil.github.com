@@ -170,4 +170,6 @@ It's pretty simple compared to my **Eight Part** 😲 MVI walkthrough which does
 
 One reason that I can think of right now might be: Maybe we're working on a more dynamic UI. The static nature of the XML does not lend itself very well to dynamically generating UI elements on the fly. It's not impossible, but I would rather do that job in Compose.
 
+Another, more common reason: The state of your Controller is not preserved between configuration changes, such as screen rotation. In these cases, the Activity or Fragment is destroyed and rebuilt. In an app like this one, the random result would be lost. You can manually preserve state yourself, or make use of the ViewModel, but at that point, you're right back in MVI or MVVM territory. If this project grows in functionality, it's going to be easier to use one of those.
+
 Here's the whole project on GitHub: [MVC Table Roller](https://github.com/erickveil/MVC_Table_Roller)

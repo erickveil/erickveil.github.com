@@ -25,7 +25,7 @@ For injecting `Context` into our `ViewModel`, the most appropriate and modern ap
 
 ## Add Hilt to our Project
 
-Ensure you have Hilt set up in our project by adding the necessary dependencies and plugins. In our `build.gradle` (project level), you need to include the Hilt Gradle plugin:
+make sure you have Hilt set up in our project by adding the necessary dependencies and plugins. In our `build.gradle` (project level), you need to include the Hilt Gradle plugin:
 
 ```groovy
 plugins { 
@@ -99,7 +99,7 @@ We would replace `".TableRollerApp"` with the actual path to the custom `Applica
 
 ### Injecting Context into the ViewModel
 
-Use `@HiltViewModel` on our ViewModel and inject `Context` using `@ApplicationContext` to ensure you're using the application context, which is safe:
+Use `@HiltViewModel` on our ViewModel and inject `Context` using `@ApplicationContext` to make sure you're using the application context, which is safe:
 ```kotlin
 @HiltViewModel
 class LootTableViewModel @Inject constructor(
@@ -116,7 +116,7 @@ The `@ApplicationContext` is going to get flagged as "This field leaks Context."
 
 ### Prepare our Activity or Fragment
 
-Ensure our `Activity` or `Fragment` is ready to work with Hilt by annotating them with `@AndroidEntryPoint`:
+Make sure our `Activity` or `Fragment` is ready to work with Hilt by annotating them with `@AndroidEntryPoint`:
 
 ```kotlin
 @AndroidEntryPoint

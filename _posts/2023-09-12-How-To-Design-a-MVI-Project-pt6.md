@@ -121,6 +121,6 @@ private fun rollLootTable() {
 This function updates the `_state` with a new value, setting `isLoading` to `false` (assuming you're using it to show a loading indicator) and `resultText` to the randomly selected item. If no item is found (for example, if `results` is empty or `lootTable` is not loaded), it sets `resultText` to "No loot found".
 #### Note on Safety and Randomness
 
-- **Null Safety**: The use of the safe call operator (`?.`) and the Elvis operator (`?:`) ensures that the function gracefully handles cases where `lootTable` might not be initialized or `results` is empty.
+- **Null Safety**: The use of the safe call operator (`?.`) and the Elvis operator (`?:`) makes it so that the function gracefully handles cases where `lootTable` might not be initialized or `results` is empty.
     
-- **Randomness**: The `random()` function provides an easy and concise way to get a random element. Ensure our list has elements before calling `.random()` to avoid exceptions. The check `it.isNotEmpty()` ensures this safety.
+- **Randomness**: The `random()` function provides an easy and concise way to get a random element. Make sure our list has elements before calling `.random()` to avoid exceptions. The check `it.isNotEmpty()` ensures this safety.

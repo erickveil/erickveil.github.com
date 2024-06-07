@@ -11,7 +11,7 @@ The `object` keyword is used to declare a singleton, object expressions (which a
 
 ### 1. Singleton
 
-In Kotlin, the `object` keyword is used to declare a singleton instance directly. Unlike Java, where implementing a singleton requires a private constructor and a static method to obtain the instance, Kotlin simplifies this process. When we declare an `object`, Kotlin ensures that exactly one instance of this class is created, and this instance is globally accessible throughout our application.
+In Kotlin, the `object` keyword is used to declare a singleton instance directly. Unlike Java, where implementing a singleton requires a private constructor and a static method to obtain the instance, Kotlin simplifies this process. When we declare an `object`, Kotlin makes it so that exactly one instance of this class is created, and this instance is globally accessible throughout our application.
 
 ```kotlin
 object MySingleton {

@@ -18,9 +18,9 @@ tags:
 
 We might need to add the necessary dependencies and enable Compose in the build.gradle (module-level) file.
 
-To enable Jetpack Compose, ensure you have the following in our module-level `build.gradle`:
+To enable Jetpack Compose, make sure you have the following in our module-level `build.gradle`:
 
-1. **Add the Compose Compiler dependency:** This is required for Compose to work. Ensure you're using a version compatible with our Kotlin version.
+1. **Add the Compose Compiler dependency:** This is required for Compose to work. Make sure you're using a version compatible with our Kotlin version.
 
     ```groovy
     buildFeatures {
@@ -130,7 +130,7 @@ In this code snippet:
 - The button now has a custom color (a deeper shade of purple) and rounded corners, achieved through the `shape` and `colors` parameters in the `Button` composable.
 - The result text is placed inside a `Surface` composable, which allows for custom shape and color. This gives the text's container rounded corners and a distinct background color for differentiation.
 - The `fillMaxWidth` modifier is applied to both the button and the text container, ensuring they span the width of the screen with some margin on each side for padding.
-- The `padding` inside the text container ensures the text is left-justified and has space to breathe, while the `fillMaxWidth` modifier inside the `Text` composable ensures proper text wrapping.
+- The `padding` inside the text container makes it so the text is left-justified and has space to breathe, while the `fillMaxWidth` modifier inside the `Text` composable makes it so proper text wrapping.
 
 ### 3. Look at the View
 

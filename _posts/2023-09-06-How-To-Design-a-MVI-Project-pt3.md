@@ -43,5 +43,5 @@ So, think of this in terms of setting up the **state** objects for a state patte
 	- Do it in a way that makes this a singleton.
 So it's basically here a supper powered `enum` value that better follows the state pattern than an enum would (which is why we have the state pattern).
 
-The `sealed` class ensures that all of the values for this state machine are going to be right here in this file only.
+The `sealed` class makes it so that all of the values for this state machine are going to be right here in this file only.
 
