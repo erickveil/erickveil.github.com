@@ -31,8 +31,11 @@ Now, it *is* technically possible to do this manually, but why would you? Well, 
 ## Install the Console Script
 
 - Tools > NuGet Package Manager > Package Manager Console
-	Install-Package Microsoft.EntityFrameworkCore.Design
-	Install-Package Microsoft.EntityFrameworkCore.SqlServer
+
+```shell
+Install-Package Microsoft.EntityFrameworkCore.Design
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
+```
 
 ## Let Visual Studio Set up Scaffolding For You
 
